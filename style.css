@@ -5,6 +5,7 @@
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .panels {
@@ -17,6 +18,10 @@ body {
   flex: 1;
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all cubic-bezier(0.1,-0.09, 0.6, 0.91) 0.7s;
 }
 
 .panel1 {
@@ -44,9 +49,42 @@ body {
 }
 
 .panel7 {
-  background-image: url(assets/australia.jpg);
+  background-image: url(assets/oceania.jpg);
+}
+
+.panel > *:first-child {
+  transform: translateY(-100vh);
+}
+
+.panel > *:last-child {
+  transform: translateY(100vh);
 }
 
 p {
   text-align: center;
+  font-size: 1.5rem;
+  transition: all ease-in-out 1s;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.open-panel {
+  flex: 5;
+}
+
+.open-panel p:first-child {
+  font-size: 2rem;
+}
+.open-panel p:nth-child(2) {
+  font-size: 4rem;
+}
+.open-panel p:last-child {
+  font-size: 2rem;
+}
+
+.open-panel > *:first-child {
+  transform: translateY(0);
+}
+
+.open-panel > *:last-child {
+  transform: translateY(0);
 }
