@@ -1,3 +1,52 @@
 * {
   font-family: 'Oxygen', sans-serif;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.panels {
+  display: flex;
+  height: 100vh;
+  align-items: stretch;
+}
+
+.panel {
+  flex: 1;
+  background-position: center;
+  background-size: cover;
+}
+
+.panel1 {
+  background-image: url(assets/asia.jpg);
+}
+
+.panel2 {
+  background-image: url(assets/africa.jpg);
+}
+
+.panel3 {
+  background-image: url(assets/north-america.jpg);
+}
+
+.panel4 {
+  background-image: url(assets/south-america.jpg);
+}
+
+.panel5 {
+  background-image: url(assets/antarctica.jpg);
+}
+
+.panel6 {
+  background-image: url(assets/europe.jpg);
+}
+
+.panel7 {
+  background-image: url(assets/australia.jpg);
+}
+
+p {
+  text-align: center;
+}
