@@ -22,6 +22,7 @@ body {
   flex-direction: column;
   justify-content: center;
   transition: all cubic-bezier(0.1,-0.09, 0.6, 0.91) 0.7s;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .panel > * {
@@ -70,13 +71,31 @@ body {
   transform: translateY(100%);
 }
 
-p {
+p,
+a {
   text-align: center;
-  font-size: 1.5rem;
+  color: white;
+}
+
+p:nth-child(2) {
+  font-size: 2rem;
 }
 
 .open-panel {
   flex: 5;
+}
+
+.open-panel p {
+  transition: ease-in-out 0.5s;
+}
+
+.open-panel p:nth-child(2) {
+  font-size: 5rem;
+}
+
+.open-panel p:first-child,
+.open-panel p:last-child {
+  font-size: 3rem;
 }
 
 .open-panel.open-active > p:first-child {
